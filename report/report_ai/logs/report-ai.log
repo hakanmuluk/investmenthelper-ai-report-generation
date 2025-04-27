@@ -1,0 +1,30 @@
+2025-04-27 16:45:34,510 - INFO - Using LLM: gpt
+2025-04-27 16:45:34,510 - INFO - Serialized input conversation. Now generating report skeleton...
+2025-04-27 16:47:27,194 - INFO - Using LLM: gpt
+2025-04-27 16:47:27,195 - INFO - Serialized input conversation. Now generating report skeleton...
+2025-04-27 16:47:44,936 - INFO - Report skeleton generated: [{'heading': 'Giriş & Kapsam', 'sub_headings': ['Rapor Amacı', 'İncelenen Dönem ve Belgeler']}, {'heading': 'Yetkili Sermaye', 'sub_headings': ['Yetkili Sermaye Değişimi', 'Ana Sözleşme Güncellemeleri']}, {'heading': 'Karlılık Analizi', 'sub_headings': ['SPK ve Yasal Kayıtlar Arasındaki Farklar', 'Net Dönem Kârı', 'Vergi Yükümlülükleri']}, {'heading': 'Temettü Politikası & Dağıtımı', 'sub_headings': ['Temettü Tutarları', 'Temettü Verimi', 'Finansman Kaynakları']}, {'heading': 'Özsermaye & Yedekler', 'sub_headings': ['Yasal Yedekler', 'Enflasyon Düzeltme Yedekleri', 'Önceki Yıllar Zararlarının Telafisi']}, {'heading': 'Kurumsal Yönetim & Yönetim Kurulu Yapısı', 'sub_headings': ['Bağımsız Üyeler', 'Yönetim Kurulu Onayları', 'Şeffaflık Uygulamaları']}, {'heading': 'İştirakler & Bağlı Ortaklıklar', 'sub_headings': ['Ana İştirakler', 'Sermaye Payları', 'Sektörel Dağılım']}, {'heading': 'Piyasa Konumu & Rekabet Analizi', 'sub_headings': ['Çeşitlendirilmiş Portföy', 'Sermaye Gücü', 'Hissedar Yapısı']}, {'heading': 'Finansal Sağlık & Temettü Performansı', 'sub_headings': ['Nakit Temettü Ödemeleri', 'Finansal Güç Göstergeleri']}, {'heading': 'İnsan Kaynakları & Kalite Standartları', 'sub_headings': ['Çalışan Politikaları', 'Halefiyet Planlaması', 'Gizlilik ve Kalite Kontrolleri']}, {'heading': 'Sonuç & Öneriler', 'sub_headings': ['Finansal Durum Değerlendirmesi', 'Yatırımcılar İçin Öneriler', 'Gelecek Dönem Beklentileri']}]
+
+Now generating report sections with `section_dedup` set to True...
+2025-04-27 16:53:15,493 - INFO - HTML report successfully generated! Converting HTML to PDF file now!
+2025-04-27 16:53:27,169 - INFO - PDF report on A Detailed Analysis of Koç Holding's Financial Performance generated and saved to /Users/hakanmuluk/Desktop/report/report_ai/reports/A_Detailed_Analysis_of_Koç_Holding's_Financial_Performance.pdf
+2025-04-27 18:14:59,057 - INFO - Using LLM: gpt
+2025-04-27 18:18:51,449 - INFO - PDF report generated and saved to /Users/hakanmuluk/Desktop/report/report_ai/reports/HAKAN_Turkcell'in_son_3_aydaki_finansal_durumunu_incele_.pdf
+2025-04-27 18:40:44,023 - INFO - Using LLM: gpt
+2025-04-27 18:45:16,268 - INFO - PDF report generated and saved to /Users/hakanmuluk/Desktop/report/report_ai/reports/tadic@gmail.com_Turkcell'in_son_3_aydaki_finansal_durumunu_incele_.pdf
+2025-04-27 19:14:14,072 - INFO - Using LLM: gpt
+2025-04-27 19:18:13,883 - INFO - PDF report generated and saved to /Users/hakanmuluk/Desktop/report/report_ai/reports/tadic@gmail.com_Turkcell'in_finansal_durumunu_anlat_.pdf
+2025-04-27 19:28:57,902 - INFO - Using LLM: gpt
+2025-04-27 19:34:06,287 - INFO - Using LLM: gpt
+2025-04-27 19:38:44,963 - INFO - PDF report generated and saved to /Users/hakanmuluk/Desktop/report/report_ai/reports/tadic@gmail.com_Koç_Holding_hakkında_rapor_hazırla_.pdf
+2025-04-27 19:54:05,717 - INFO - Using LLM: gpt
+2025-04-27 19:59:17,304 - INFO - PDF report generated and saved to /Users/hakanmuluk/Desktop/report/report_ai/reports/tadic@gmail.com_Akbankı_analiz_et_.pdf
+2025-04-27 20:51:41,692 - INFO - Using LLM: gpt
+2025-04-27 20:54:48,356 - INFO - PDF report generated and saved to /Users/hakanmuluk/Desktop/report/report_ai/reports/tadic@gmail.com_Türk_Hava_Yolları_ve_Turkcell_şirketlerini_karşılaştır_ve_hangisine_yatırım_yapmam_gerektiği_hakkında_bir_rapor_hazırla_.pdf
+2025-04-27 21:05:33,468 - INFO - Using LLM: gpt
+2025-04-27 21:09:49,414 - INFO - PDF report generated and saved to /Users/hakanmuluk/Desktop/report/report_ai/reports/tadic@gmail.com_Türk_Hava_Yolları_ve_Turkcell_şirketlerini_karşılaştır_ve_hangisine_yatırım_yapmam_gerektiği_hakkında_bir_rapor_hazırla_.pdf
+2025-04-27 23:20:33,806 - INFO - Using LLM: gpt
+2025-04-27 23:24:30,937 - INFO - PDF report generated and saved to /Users/hakanmuluk/Desktop/report/report_ai/reports/tadic@gmail.com_Turkcell_Finansal_Performans_Analizi_.pdf
+2025-04-27 23:43:35,129 - INFO - Using LLM: gpt
+2025-04-27 23:48:42,744 - INFO - PDF report generated and saved to /Users/hakanmuluk/Desktop/report/report_ai/reports/tadic@gmail.com_Turkcell_Finansal_Performans_Analizi_.pdf
+2025-04-27 23:54:01,645 - INFO - Using LLM: gpt
+2025-04-27 23:57:58,381 - INFO - PDF report generated and saved to /Users/hakanmuluk/Desktop/report/report_ai/reports/tadic@gmail.com_Turkcell_Finansal_Performans_Analizi_.pdf
