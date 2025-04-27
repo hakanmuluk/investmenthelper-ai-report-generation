@@ -6,6 +6,7 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
       chromium \
       dbus \
+      ca-certificates \
       libnss3 \
       libxss1 \
       libasound2 \
