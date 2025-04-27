@@ -92,7 +92,13 @@ async def html_to_pdf(html_file_executive_summary, html_file_content, html_file_
     browser = await launch(
         executablePath=get_module_path("chromium"),
         headless=True,
-        args=['--no-sandbox'],
+        args=[
+             "--no-sandbox",
+             "--disable-setuid-sandbox",
+             "--disable-dev-shm-usage",
+             "--disable-gpu",
+             "--single-process",
+        ],
         handleSIGINT=False,
         handleSIGTERM=False,
         handleSIGHUP=False
