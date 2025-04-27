@@ -93,7 +93,7 @@ async def html_to_pdf(html_file_executive_summary, html_file_content, html_file_
         headless=True,
         executablePath=os.environ["PUPPETEER_EXECUTABLE_PATH"],
         dumpio=True,
-        args=["--no-sandbox","--disable-setuid-sandbox","--disable-dev-shm-usage", "--disable-features=AudioServiceOutOfProcess"]
+        args=["--no-sandbox","--disable-setuid-sandbox","--disable-dev-shm-usage", "--disable-features=AudioServiceOutOfProcess,AudioService"]
     )
 
     # Initialize pypdf PdfWriter object
