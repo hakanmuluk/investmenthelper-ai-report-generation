@@ -4,10 +4,22 @@ FROM python:3.12-slim
 # 1) Install Chromium dependencies
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-      chromium libnss3 libxss1 libasound2 fonts-liberation \
-      libatk1.0-0 libgbm1 libgtk-3-0 libxcomposite1 \
-      libxdamage1 libxrandr2 libxcursor1 libxfixes3 \
-      libxi6 libxtst6 \
+      chromium \
+      dbus \
+      libnss3 \
+      libxss1 \
+      libasound2 \
+      fonts-liberation \
+      libatk1.0-0 \
+      libgbm1 \
+      libgtk-3-0 \
+      libxcomposite1 \
+      libxdamage1 \
+      libxrandr2 \
+      libxcursor1 \
+      libxfixes3 \
+      libxi6 \
+      libxtst6 \
     && rm -rf /var/lib/apt/lists/*
 
 # 2) Set our working folder so that `report/` is the project root
