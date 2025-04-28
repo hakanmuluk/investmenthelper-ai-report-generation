@@ -59,8 +59,8 @@ async def run_job(job_id: str, req: ReportRequest):
     try:
         # Q/A generation
         answered, unanswerable = [], []
-        for _ in range(10):
-            needed = 13 - len(answered)
+        for _ in range(6):
+            needed = 6 - len(answered)
             questions = (
                 generateQuestions(req.reportGenerationQuery, needed)
                 if not answered and not unanswerable
@@ -75,7 +75,7 @@ async def run_job(job_id: str, req: ReportRequest):
                 qa_pairs = await asyncio.gather(*[ask_question(q, client) for q in questions])
             for q, a in qa_pairs:
                 (unanswerable if "Bilmiyorum" in a else answered).append((q, a))
-            if len(answered) >= 10:
+            if len(answered) >= 6:
                 break
 
         # Build conversation
