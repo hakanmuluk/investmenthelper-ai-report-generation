@@ -59,6 +59,7 @@ async def run_job(job_id: str, req: ReportRequest):
     try:
         # Q/A generation
         answered, unanswerable = [], []
+        print(str(req.reportGenerationQuery))
         for _ in range(6):
             needed = 6 - len(answered)
             questions = (
@@ -71,6 +72,7 @@ async def run_job(job_id: str, req: ReportRequest):
                     unanswerable,
                 )
             )
+            print(str(questions))
             async with httpx.AsyncClient() as client:
                 qa_pairs = await asyncio.gather(*[ask_question(q, client) for q in questions])
             for q, a in qa_pairs:
