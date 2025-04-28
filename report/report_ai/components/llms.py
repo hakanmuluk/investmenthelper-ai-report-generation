@@ -13,7 +13,7 @@ from langchain_core.exceptions import OutputParserException
 from langchain_core.language_models.chat_models import BaseChatModel
 
 openai = {
-    'gpt-4o-mini': ChatOpenAI(model_name='gpt-4o-mini', temperature=0.5)
+    'gpt-4.1-mini': ChatOpenAI(model_name='gpt-4.1-mini', temperature=0.5)
 }
 
 anthropic = {
