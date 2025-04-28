@@ -3,7 +3,9 @@ import os
 from dotenv import load_dotenv
 from datetime import date
 import json
-
+import time
+import logging
+from json import JSONDecodeError
 
 
 load_dotenv()  # reads .env into os.environ
@@ -139,15 +141,32 @@ def generateMoreQuestions(userQuery, questionCount, answeredQuestions, unanswera
     n: {questionCount}
     Bugünün tarihi: {today_str}
     unutma, her yeni soru yalnızca bir şirketi içermeli.
-    Ve son olarak: daha genel sorular sormaya çalış ve çok spesifik olmayan bilgiler almaya çalış!"""
+    Ve son olarak: daha genel sorular sormaya çalış ve çok spesifik olmayan bilgiler almaya çalış!
+    Ve JSON formatında yanıt üret!"""
 
-    response = client.chat.completions.create(model = "gpt-4o-mini", messages=[{"role": "user", "content": prompt}], temperature=0.30)
-    data = json.loads(response.choices[0].message.content)
+    while True:
+        # 1) call the LLM
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.30
+        )
+        content = response.choices[0].message.content.strip()
 
-    # extract the list under the "questions" key
-    questions_list = data["questions"]
+        # 2) try to parse JSON
+        try:
+            data = json.loads(content)
+            questions_list = data["questions"]
+            if not isinstance(questions_list, list):
+                raise ValueError("`questions` is not a list")
+            return questions_list
 
-    return questions_list
+        except (JSONDecodeError, KeyError, ValueError) as e:
+            # log the bad response for debugging
+            logger.warning(f"Invalid JSON response, retrying… error={e!r}, content={content!r}")
+            # wait a bit before retrying to avoid hammering the API
+            time.sleep(1)
+            # loop will repeat until we get valid JSON
 
 def generateTitles(reportTopic, userConversationsString):
     prompt = f"""Aşağıdaki “Rapor Konusu” ve “Chatbot–Kullanıcı Konuşması” bilgilerini kullanarak, finansal raporunuz için 6–7 başlık ve her bir başlığın 2–3 alt başlık olarak düzenlenmiş biçimde üretin. Çıktı, her satırı “- Başlık (Alt1, Alt2, …)” formatında olacak şekilde, düzenli bir madde listesi olarak sunulmalıdır.
