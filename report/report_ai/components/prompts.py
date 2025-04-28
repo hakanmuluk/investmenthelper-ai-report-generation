@@ -134,6 +134,7 @@ def generateMoreQuestions(userQuery, questionCount, answeredQuestions, unanswera
     Aşağıdaki üç girdiyi oku.
     Tam olarak n adet yeni, basit ve kendi başına anlaşılır soru üret.
     Cevaplanan veya cevaplanamayan listelerdeki soruları tekrarlama.
+    Eğer birden fazla şirket hakkında bilgi alman gerekiyorsa cevaplanmış sorularda daha az olan şirketlere öncelik verebilirsin.
     Yalnızca yukarıda belirtilen geçerli JSON formatında çıktı ver.
     Orijinal Kullanıcı Sorusu: {userQuery}
     Cevaplanmış sorular: {answeredQuestions} 
