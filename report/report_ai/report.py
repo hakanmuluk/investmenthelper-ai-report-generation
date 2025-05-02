@@ -24,8 +24,8 @@ logger = configs.logger
 
 
 @retry(stop=stop_after_attempt(3))
-async def generate_executive_summary_content(serialized_conversation: str, llm: str):
-    executive_summary_html = await design_executive_summary(serialized_conversation, llm)
+async def generate_executive_summary_content(skeleton_str, serialized_conversation: str, llm: str):
+    executive_summary_html = await design_executive_summary(skeleton_str, serialized_conversation, llm)
     return extract_html_body_content(executive_summary_html)
 
 
@@ -38,13 +38,13 @@ async def generate_section_content(serialized_conversation: str, section: Dict, 
     return extract_html_body_content(section_html)
 
 
-async def generate_report(serialized_conversation: str, report_skeleton: List[Dict], references: List[str],
+async def generate_report(skeleton_str, serialized_conversation: str, report_skeleton: List[Dict], references: List[str],
                           llm: str, apply_section_dedup: bool) -> (str, str):
     # Initialize lists to hold HTML and text sections of the report
     html_sections, text_sections = [], []
 
     html_executive_summary, _ = await generate_executive_summary_content(
-        serialized_conversation, llm=llm
+        skeleton_str, serialized_conversation, llm=llm
     )
 
     for section in tqdm(report_skeleton, desc="Generating report..."):
@@ -94,7 +94,7 @@ async def run_generation_async(userQuery, conversation: List[Dict],
 
     # 3) serialize conversation & design skeleton
     serialized_conversation, references = await serialize_conversation(conversation)
-    report_skeleton = await design_report_skeleton(
+    report_skeleton, skeleton_str = await design_report_skeleton(
         userQuery,
         serialized_conversation,
         llm=llm_instance
@@ -102,6 +102,7 @@ async def run_generation_async(userQuery, conversation: List[Dict],
 
     # 4) generate HTML sections
     html_exec_summary, html_report = await generate_report(
+        skeleton_str,
         serialized_conversation,
         report_skeleton,
         references,
