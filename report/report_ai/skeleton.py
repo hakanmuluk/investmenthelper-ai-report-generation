@@ -79,4 +79,14 @@ async def design_report_skeleton(title: str, serialized_conversation: str, llm: 
         output_parser,
         llm=llm
     )
-    return parsed_output.dict()['skeleton']
+    skeleton_list: List[Section] = parsed_output.skeleton
+
+    # 3) build one big string, heading + bullets
+    lines: List[str] = []
+    for sec in skeleton_list:
+        lines.append(sec.heading)
+        for sub in sec.sub_headings:
+            lines.append(sub)
+
+    skeleton_str = "\n".join(lines)
+    return parsed_output.dict()['skeleton'], skeleton_str
