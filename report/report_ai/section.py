@@ -29,7 +29,6 @@ SECTION_SYSTEM_PROMPT_TEMPLATE = (
 
 additional_guidelines_with_figures = (
     "- **Tabloların Kullanımı**: Mümkün olduğunca verileri ve bulguları tablolara dönüştürerek sentezleyin. Tablolar açıkça etiketlenmeli ve sundukları verileri özetleyen başlıklar içermelidir. Tabloları numaralandırmayın.\n"
-    "- **Mermaid Grafikler**: İlgili ve gerekli olduğunda, bölümünüzle ilgili süreçleri, ilişkileri veya veri yapılarını görsel olarak temsil etmek için Mermaid diyagramlarını entegre edin. Bu grafiklerin içeriğe uygun ve karmaşık bilgileri basitleştirerek etkin bir şekilde iletmeye yardımcı olduğundan emin olun. Mevcut raporda zaten bulunan aynı mermaid diyagramlarını tekrar etmeyin. Her bir düğüm etiketini mutlaka tırnak işareti içinde tutun. Tüm Mermaid kodunu 'mermaid' adlı bir CSS sınıfı altında konumlandırın.\n\n"
 )
 
 
