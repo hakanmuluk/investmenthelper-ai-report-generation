@@ -45,7 +45,6 @@ EXECUTIVE_SUMMARY_SYSTEM_PROMPT_TEMPLATE = (
     "- **HTML Biçimlendirmesi**: Belgenizi yapılandırmak için HTML öğeleri kullanın. Okunabilirlik ve düzen için başlıklar, listeler, vurgulama ve tablolar gibi uygun HTML sözdizimini kullanın. Her zaman <body> öğesi ile başlayın. <html>, <meta> gibi başlangıç HTML öğeleri eklemenize gerek yok. Bölüm başlıkları için <h2>, alt başlıklar için <h3> etiketlerini kullanın. 'Rapor Özeti' başlığını içeren bir <h2> etiketi ile başlayın.\n"
     "- Her bölüm en fazla 3–4 önemli madde içermelidir. Ayrıca oluşturulan içerik analitik, yüksek düzeyde ilgili, nesnel ve ayrıntılarla dolu olmalıdır.\n"
     "{__ADDITIONAL_GUIDELINES__}"
-    "Kullanılan her yerde doğru Mermaid kod parantezlerinin sözdizimini takip ettiğinizden emin olun. Metinde 'Mermaid' kelimesine yer vermeyin. "
     "Genel geçer ifadelerden ve aşırı kullanılan klişelerden kaçının ve sağlanan verilerin kapsamlı analizi temelinde benzersiz içgörüler sunmaya çalışın."
 )
 
