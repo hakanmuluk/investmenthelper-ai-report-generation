@@ -35,6 +35,7 @@ EXECUTIVE_SUMMARY_SYSTEM_PROMPT_TEMPLATE_2 = (
     "Elinizdeki iskeletteki bölümleri kullanarak, verilen örnekteki gibi bir özet oluşturun."
     "**Yönergeler:**\n"
     "- Her bölüm için en fazla 3–4 madde kullanın; her madde kesin odaklı olmalı ve verilerle desteklenmelidir.\n"
+    "- Ürettiğiniz cevapta herhangi bir tablo kullanmayın, bölümlerin altında yalnızca maddeler kullanın.\n"
     "- Anahtar rakamları veya oranları satır içinde kalın yazı tipiyle vurgulayın (örn. **F/K: 12.5x**, **Temettü Verimi: 3.2%**).\n"
     "- Dili analitik, nesnel ve klişelerden arındırılmış tutun (‘rapor tartışıyor’ gibi ifadelere yer vermeyin).\n"
     "- Özetiniz bağımsız olmalı: bir okuyucu ek bağlam olmadan tam öneriyi kavrayabilmelidir.\n\n"
